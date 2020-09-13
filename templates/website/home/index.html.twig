@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{# View : Home Page index #}
+
+{% block title %}Mélanie MORICE{% endblock %}
+
+	{% block head %}{{ parent() }}{% endblock %}
+
+{% block content %}
+
+<!--Titre -->
+<section class="bg-gray section-title">
+    <div class="container">	
+		<div class="row">
+			<div class="col-sm-6 sm-margin-b-60">
+			<h1>Mélanie MORICE</h1>
+
+			</div>
+			<div class="col-sm-6 sm-margin-b-60">
+			<img class="logo" src="{{ asset('build/images/logo.png') }}">
+			</div>
+		</div>
+	</div>	
+</section>
+
+<section class="section-presentation">
+
+	<div class="container">
+	Partie CV
+	</div>
+</section>
+
+<section class="section-slide">
+	<div class="container">
+		SLIDE ACTUALITE
+	</div>
+
+</section>
+
+
+{% endblock %}

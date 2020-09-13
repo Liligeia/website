@@ -1,0 +1,111 @@
+<!-- Base : Website -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    {% block head %}
+        <meta charset="UTF-8">
+            <!--Stylesheet-->
+
+            <!-- Metatag -->
+        <meta name="title" content="Mélanie MORICE">
+        <meta name="description" content="Développeuse web en recherche active d'emploi">
+        <meta name="author" content="Mélanie MORICE">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    	<!-- Bootstrap -->
+        {% block stylesheets %}
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">          	
+        <link rel="stylesheet" href="{{asset('build/css/main.css')}}">	
+        {% endblock %}
+      
+            <!--Title-->
+        <title>{% block title %}Mélanie MORICE{% endblock %}</title>
+    {% endblock %}
+    </head>
+
+    <body>
+        {% block body %}  
+        <div id="global"> 	
+            <!--Header-->
+        <header class="navbar-fixed-top">
+            <!--Nav-->
+            <div class ="row">
+                <div class= "col-md-12">  
+					<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+					 <div class="container">                 	
+	                	<div class="col-md-6">  
+	                		<div id="logo">
+	                			<a href="{{ path('home') }}">
+	                				<img class="logo-img" src="{{ asset('build/images/logo-melanie.jpg') }}">
+	                			</a>
+	                		</div>
+	                	</div>	
+		                <div class="col-md-6">          
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav navbar-nav-right ml-auto">
+									<li class="dropdown nav-item active"><a class="nav-link" href="{{ path('home') }}">Accueil</a></li>
+									<li class="dropdown nav-item"><a class="nav-link" href="{{ path('presentation') }}">Présentation</a></li>
+									<li class="dropdown nav-item"><a class="nav-link" href="{{ path('realisations') }}">Réalisations</a></li>
+									<li class="dropdown nav-item"><a class="nav-link" href="{{ path('photo') }}"></a></li>									
+									<li class="dropdown nav-item"><a class="nav-link" href="{{ path('contact') }}">Contact</a></li>
+								</ul>
+							</div>
+						</div>	
+					</div>	
+					</nav> 
+				</div>	 
+			</div> 
+
+        </header>
+            <!--Container-->
+    
+	        <div class ="row">
+	            <div class= "col-md-12">
+	                <div class="container-fluid">
+	                    {% block content %}{% endblock %}
+	                </div>
+	            </div>
+	        </div> 
+            <!--Footer-->
+        <footer>
+        	<div class="container content-lg"> 	
+	        	<div class="row">
+	        		<div class="col-md-12">
+	        			<div class="row">
+	        				<div class="col-md-3 col-xs-6 md-margin-b-30">
+	        					<h4>Lieu</h4>
+	        					<p>Courbevoie, France</p>
+	        				</div>	        				
+	        				<div class="col-md-3 col-xs-6 md-margin-b-30">
+	        					<h4>Mail</h4>
+	        					<a href="mailto:melanie.xelm@gmail.com">melanie.xelm@gmail.com</a>        					
+	        				</div>
+	        				<div class="col-md-3 col-xs-6 md-margin-b-30">
+	        					<h4>Téléphone</h4>
+	        					<a href="tel:+3361589289">0661589289</a>
+	        				</div>	 
+	        				<div class="col-md-3 col-xs-6 md-margin-b-30">
+	        					<h4>Téléchargement</h4>
+	        					<a href="{{ path('photo') }}">Xelm photography</a>
+	        				</div>		        				     				       				
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>	
+        </footer>
+    	</div>
+
+
+        {% endblock %}
+               
+
+            <!-- Javascript -->  
+        {% block javascripts %}    
+    		<!-- jQuery -->
+	    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    		<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>           
+        {% endblock %}
+    </body>
+</html>

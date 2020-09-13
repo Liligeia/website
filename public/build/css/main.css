@@ -1,0 +1,73 @@
+   /**********/
+  /**GLOBAL**/
+ /**********/
+
+body, html{
+	width: 100%
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+    display: flex;
+  	flex-direction: column;
+}
+footer{
+	background-color: #FAFAFA;
+}
+#global, .container-fluid{
+	min-height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.content-lg {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+a:link, a:hover, a:visited{
+	text-decoration: none;
+	color: black;
+}
+.bg-gray{
+	background-color: #FAFAFA;
+}
+/*Navbar*/
+.logo-img{
+	width: 150px;
+}
+.navbar{
+	background-color: white;
+	font-size: 1.2em;
+	box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+	padding: 20px 0;
+}
+.nav-item{
+	margin: 5px;
+}
+.navbar-nav{
+	list-style: none;	
+	float: right;
+}
+.margin-page{
+	margin-top: 7%;
+}
+
+/*HOME*/
+
+.logo{
+	float: right;
+	width: 300px;
+}
+.section-title{
+	padding: 170px 0 100px 0;
+}
+.section-presentation{
+	padding: 80px 0;
+}
