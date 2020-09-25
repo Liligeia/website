@@ -18,27 +18,43 @@ footer{
 #global, .container-fluid{
 	min-height: 100%;
     width: 100%;
-    padding: 0;
+    padding: 40px 0 0 0;
     overflow: hidden;
 }
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.container-fluid>p{ /*verif*/
+	font-size: 2rem;
 }
 .content-lg {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
+}
+.row{
+	margin: 0;
 }
 a:link, a:hover, a:visited{
 	text-decoration: none;
 	color: black;
 }
+h1{
+	font-size: 4em;
+}
+h2{
+	font-size: 3em;
+}
+h3{
+	text-decoration: underline;
+}
 .bg-gray{
 	background-color: #FAFAFA;
 }
 /*Navbar*/
+header{
+    margin-right: -15px;
+    margin-left: -15px;
+}
 .logo-img{
 	width: 150px;
 }
@@ -70,4 +86,27 @@ a:link, a:hover, a:visited{
 }
 .section-presentation{
 	padding: 80px 0;
+}
+
+/*PRESENTATION*/
+.presentation_description > p{
+	font-size: 2.2rem ;
+	margin: 2%;
+}
+.cv>img{
+    margin: 5% 5%;
+	width: 90%;
+}
+/*REALISATION*/
+.realisations_img{
+    width: 100%;
+    border: 1px solid #eee;
+}
+.logos_language{
+	display: flex;
+    flex-wrap: wrap;
+}
+.logo_language{
+	width: 25%;
+	padding: 10px 15px;
 }

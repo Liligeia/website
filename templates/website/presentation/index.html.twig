@@ -2,12 +2,33 @@
 
 {# View : Presentation Page index #}
 
-{% block title %}Mélanie MORICE - Présentation{% endblock %}
+{% block title %}Présentation{% endblock %}
 
 	{% block head %}{{ parent() }}{% endblock %}
 
 {% block content %}
+<div class="container">
+	<div class="row">
+		<div class="presentation_description">
+			<h2>{{ block('title') }}</h2>
+			<p>
+				Développeuse Web en recherche active.
+				<br/>
+				Après avoir effectué une formation de Développeur Web où j'ai obtenu un diplome de niveau 5 (Bac +2).
+				J'ai appris tout au long à intégrer une maquette, réaliser une carte intéractive à l'aide d'une Api, mettre en place un site sous Wordpress et créer un blog en php.<br/>
+				Pour terminer cette formation j'ai réalisé un stage de 5 mois en entreprise où j'ai pu mettre en avant mes compétences acquises et en apprendre de nouvelles tel que Symfony.
+				<br/>
+				Actuellement, je travail sur un projet en scala/react.js et Less.
+			</p>
+		</div>
+		<div class="cv">
+			<h3>Mon CV :</h3>
+			<img src="{{ asset('build/images/cv/CV-2020-DEVELOPPEURWEB.jpg') }}"/>
+		</div>
+	</div>
+</div>
 
-<p>Présentation de moi</p>
+
+
 
 {% endblock %}
