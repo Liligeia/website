@@ -14,6 +14,11 @@ body{
 }
 footer{
 	background-color: #FAFAFA;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
 }
 #global, .container-fluid{
 	min-height: 100%;
@@ -31,21 +36,33 @@ footer{
 .content-lg {
     padding: 100px 0;
 }
-.row{
-	margin: 0;
-}
 a:link, a:hover, a:visited{
 	text-decoration: none;
 	color: black;
 }
+-a{
+	color: #81848f;
+}
 h1{
 	font-size: 4em;
+    color: #515769;
 }
 h2{
 	font-size: 3em;
+    color: #515769;
 }
 h3{
 	text-decoration: underline;
+	font-size: 2em;
+    color: #515769;
+}
+h4{
+	font-size: 1.8em;
+    color: #515769;
+}
+p{
+	font-size: 1.3em;
+	color: #a6a7aa;
 }
 .bg-gray{
 	background-color: #FAFAFA;
@@ -66,10 +83,30 @@ header{
 }
 .nav-item{
 	margin: 5px;
+	padding: 0 10px;
 }
 .navbar-nav{
 	list-style: none;	
 	float: right;
+}
+.header .nav-item:hover {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 9px;
+    height: 2px;
+    background: #17bed2;
+    opacity: 0;
+    content: " ";
+    transition-duration: .4s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
+}
+.header .nav-item:hover .nav-item-hover:after {
+    opacity: 1;
+    transition-duration: .4s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
 }
 .margin-page{
 	margin-top: 7%;
@@ -81,21 +118,36 @@ header{
 	float: right;
 	width: 300px;
 }
+.logo-mm{
+	display: flex;
+    justify-content: center;
+}
 .section-title{
 	padding: 170px 0 100px 0;
+}
+.social-media{
+    display: flex;
+   	justify-content: center;
+}
+.social-logo{
+	padding: 5% 8% 0 8%;
+	font-size: 5em;
 }
 .section-presentation{
 	padding: 80px 0;
 }
 
 /*PRESENTATION*/
-.presentation_description > p{
-	font-size: 2.2rem ;
-	margin: 2%;
-}
-.cv>img{
+.cv_image{
     margin: 5% 5%;
 	width: 90%;
+}
+.cv_download{
+    padding: 5px 25px;
+    background-color: #FAFAFA;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #cccccc;
 }
 /*REALISATION*/
 .realisations_img{
@@ -110,3 +162,48 @@ header{
 	width: 25%;
 	padding: 10px 15px;
 }
+/*CONTACT*/
+/*Formulaire*/
+.form-contact{
+    display: flex;
+    justify-content: center;
+}
+#form{
+	width: 95%;
+	margin-left: 2%;
+}
+#form_nom, #form_email, #form_objet, #form_message{
+  width: 600px;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #a0a0a0;
+}
+#form_message{
+  height: 100px;
+	max-height: 400px;
+}
+#form_envoyer{
+  padding: .375rem .75rem;
+  color: #529bff;
+  background-color: white;
+  border: 1px solid #529bff;
+  border-radius: 5px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#form_envoyer:hover{
+  color: white;
+  background-color: #529bff;
+}
+
+/*PHOTO*/
+.photo_build{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20%;
+}
+.build{
+	width: 100%;
+}
+
+
