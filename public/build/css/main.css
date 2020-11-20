@@ -143,6 +143,9 @@ header{
 	width: 90%;
 }
 .cv_download{
+	display: flex;
+    justify-content: center;
+    margin: 0 45% 5% 45%;
     padding: 5px 25px;
     background-color: #FAFAFA;
     border: solid 1px;
