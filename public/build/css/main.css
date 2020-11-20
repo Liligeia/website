@@ -167,9 +167,13 @@ header{
 }
 /*CONTACT*/
 /*Formulaire*/
+#contact{
+	margin: 10% 0;
+}
 .form-contact{
     display: flex;
     justify-content: center;
+    margin: 10% 0px;
 }
 #form{
 	width: 95%;
@@ -181,11 +185,16 @@ header{
   border-radius: 0px;
   border-bottom: 1px solid #a0a0a0;
 }
+.form-contact label{
+	margin: 2% 0;
+}
 #form_message{
   height: 100px;
 	max-height: 400px;
 }
 #form_envoyer{
+  display: flex;
+  margin: 5% auto;
   padding: .375rem .75rem;
   color: #529bff;
   background-color: white;
