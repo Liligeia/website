@@ -1,85 +1,49 @@
-// On récupère le conteneur principal du diaporama
-const diapo = document.querySelector(".diapo")
+(function() {
+  var $slides = document.querySelectorAll('.slide');
+  var $controls = document.querySelectorAll('.slider__control');
+  var numOfSlides = $slides.length;
+  var slidingAT = 1300; // sync this with scss variable
+  var slidingBlocked = false;
 
-// On récupère le conteneur de tous les éléments
-elements = document.querySelector(".elements")
+  [].slice.call($slides).forEach(function($el, index) {
+    var i = index + 1;
+    $el.classList.add('slide-' + i);
+    $el.dataset.slide = i;
+  });
 
-// On récupère un tableau contenant la liste des diapos
-slides = Array.from(elements.children)
+  [].slice.call($controls).forEach(function($el) {
+    $el.addEventListener('click', controlClickHandler);
+  });
 
-// On récupère les deux flèches
-let next = document.querySelector("#nav-droite")
-let prev = document.querySelector("#nav-gauche")
+  function controlClickHandler() {
+    if (slidingBlocked) return;
+    slidingBlocked = true;
 
-// Variables globales
-let compteur = 0 // Compteur qui permettra de savoir sur quelle slide nous sommes
-let timer, elements, slides, slideWidth
+    var $control = this;
+    var isRight = $control.classList.contains('m--right');
+    var $curActive = document.querySelector('.slide.s--active');
+    var index = +$curActive.dataset.slide;
+    (isRight) ? index++ : index--;
+    if (index < 1) index = numOfSlides;
+    if (index > numOfSlides) index = 1;
+    var $newActive = document.querySelector('.slide-' + index);
 
-// On calcule la largeur visible du diaporama
-slideWidth = diapo.getBoundingClientRect().width
+    $control.classList.add('a--rotation');
+    $curActive.classList.remove('s--active', 's--active-prev');
+    document.querySelector('.slide.s--prev').classList.remove('s--prev');
 
-// On met en place les écouteurs d'évènements sur les flèches
-next.addEventListener("click", slideNext)
-prev.addEventListener("click", slidePrev)
+    $newActive.classList.add('s--active');
+    if (!isRight) $newActive.classList.add('s--active-prev');
 
-/**
- * Cette fonction fait défiler le diaporama vers la droite
- */
-function slideNext(){
-    // On incrémente le compteur
-    compteur++
 
-    // Si on dépasse la fin du diaporama, on "rembobine"
-    if(compteur == slides.length){
-        compteur = 0
-    }
+    var prevIndex = index - 1;
+    if (prevIndex < 1) prevIndex = numOfSlides;
 
-    // On calcule la valeur du décalage
-    let decal = -slideWidth * compteur
-    elements.style.transform = `translateX(${decal}px)`
-}
+    document.querySelector('.slide-' + prevIndex).classList.add('s--prev');
 
-/**
- * Cette fonction fait défiler le diaporama vers la gauche
- */
-function slidePrev(){
-    // On décrémente le compteur
-    compteur--
-
-    // Si on dépasse le début du diaporama, on repart à la fin
-    if(compteur < 0){
-        compteur = slides.length - 1
-    }
-
-    // On calcule la valeur du décalage
-    let decal = -slideWidth * compteur
-    elements.style.transform = `translateX(${decal}px)`
-}
-
-// Automatiser le diaporama
-timer = setInterval(slideNext, 4000)
-
-// Gérer le survol de la souris
-diapo.addEventListener("mouseover", stopTimer)
-diapo.addEventListener("mouseout", startTimer)
-
-/**
- * On stoppe le défilement
- */
-function stopTimer(){
-    clearInterval(timer)
-}
-
-/**
- * On redémarre le défilement
- */
-function startTimer(){
-    timer = setInterval(slideNext, 4000)
-}
-
-// Mise en oeuvre du "responsive"
-window.addEventListener("resize", () => {
-    slideWidth = diapo.getBoundingClientRect().width
-    slideNext()
-})
-
+    setTimeout(function() {
+      $control.classList.remove('a--rotation');
+      slidingBlocked = false;
+    }, slidingAT*0.75);
+  };
+}());

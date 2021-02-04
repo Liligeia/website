@@ -8,20 +8,48 @@
 
 {% block content %}
 
-<div class="container">
-	<div class="row">
-		<div class="photo_build">
+    <div class="container">
+        <div class="box_img">
+            <ul class="slides">
+                <li id="slide1"><img src="{{ asset('build/images/xelm_photography/20-08-23_legendes_estivales_23.jpg') }}" alt="" /></li>
+                <li id="slide2"><img src="{{ asset('build/images/xelm_photography/20-01-26_hivernal_04.jpg') }}" alt="" /></li>
+                <li id="slide3"><img src="{{ asset('build/images/xelm_photography/19-08-13_Princess_Mononoke_02.jpg') }}" alt="" /></li>
+                <li id="slide4"><img src="{{ asset('build/images/xelm_photography/20-09-05_steampunk_07.jpg') }}" alt="" /></li>
+                <li id="slide5"><img src="{{ asset('build/images/xelm_photography/20-08-23_legendes_estivales_23.jpg') }}" alt="" /></li>
+            </ul>
 
-			<img class="build" src="{{ asset('build/images/travaux.png') }}"/>
-			<h4 class="text-center">En travaux</h4>
-			<h5>Prochainement :</h5>
-			<ul>
-				<li>Visionnage des photos</li>
-				<li>Téléchargement des photos</li>
-				<li>Album photo accessible uniquement sur mot de passe</li>
-			</ul>
-		</div>
-	</div>
+            <ul class="thumbnails">
+                <li>
+                    <a href="#slide1"><img src="{{ asset('build/images/xelm_photography/20-08-23_legendes_estivales_23.jpg') }}" /></a>
+                </li>
+                <li>
+                    <a href="#slide2"><img src="{{ asset('build/images/xelm_photography/20-01-26_hivernal_04.jpg') }}" /></a>
+                </li>
+                <li>
+                    <a href="#slide3"><img src="{{ asset('build/images/xelm_photography/19-08-13_Princess_Mononoke_02.jpg') }}" /></a>
+                </li>
+                <li>
+                    <a href="#slide4"><img src="{{ asset('build/images/xelm_photography/20-09-05_steampunk_07.jpg') }}" /></a>
+                </li>
+                <li>
+                    <a href="#slide5"><img src="{{ asset('build/images/xelm_photography/20-08-23_legendes_estivales_23.jpg') }}" /></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="photo_build">
+
+                <img class="build" src="{{ asset('build/images/travaux.png') }}"/>
+                <h4 class="text-center">En travaux</h4>
+                <h5>Prochainement :</h5>
+                <ul>
+                    <li>Visionnage des photos</li>
+                    <li>Téléchargement des photos</li>
+                    <li>Album photo accessible uniquement sur mot de passe</li>
+                </ul>
+            </div>
+        </div>
 </div>
 
 

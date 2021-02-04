@@ -16,9 +16,9 @@
 			<h1>Mélanie MORICE</h1>
 			<h2>Développeuse web</h2>
 			<div class="social-media">
-				<a class="social-logo" href="https://github.com/Liligeia"><i class="fab fa-github"></i></a>
-				<a class="social-logo" href="https://www.linkedin.com/in/mélanie-morice-2aaa5a99"><i class="fab fa-linkedin"></i></a>
-				<a class="social-logo" href="https://www.facebook.com/XelmPhotography/"><i class="fab fa-facebook"></i></a>
+				<a class="social-logo" href="https://github.com/Liligeia" target="_blank"><i class="fab fa-github"></i></a>
+				<a class="social-logo" href="https://www.linkedin.com/in/mélanie-morice-2aaa5a99" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a class="social-logo" href="https://codepen.io/liligeia/collections/public" target="_blank"><i class="fab fa-codepen"></i></a>
 			</div>
 			</div>
 			<div class="col-sm-6 sm-margin-b-60 logo-mm">
@@ -28,17 +28,117 @@
 	</div>	
 </section>
 
+
+
 <section class="section-presentation">
 	<div class="container">
-	Partie CV
+	    <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <img class="photo_identite" src="{{ asset('build/images/cv/photo_identite.jpg') }}" alt="">
+                </div>
+                <div class="row">
+                    <a class="btn_ btn-theme btn-theme-md btn-default-bg" href="{{ asset('build/images/cv/Melanie_MORICE_CV_DW.pdf') }}" target="_blank"><i class="fas fa-download"></i>  CV</a>
+                    <a class="btn_ btn-theme btn-theme-md btn-default-bg" href="{{ path('realisations') }}"><i class="fas fa-code"></i>  Réalisation</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <h3>Compétences :</h3>
+                    <div class="row">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/html.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/css.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/less.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/js.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/vuejs.png') }}"/>
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/json.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/jquery.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/wordpress.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/bootstrap.png') }}"/>
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/Symfony.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/php.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/php-mysql.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/doctrine.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/twig.png') }}">
+                        <!--<img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/scala.png') }}"/>-->
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/github.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/languages/gitlab.png') }}"/>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <h3>Logiciels Adobe: </h3>
+                    <div class="row">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Ps.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Br.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Lr.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Xd.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Id.png') }}">
+                        <img class="col-sm-2 logo_language" src="{{ asset('build/images/realisations/logiciels/Pr.png') }}">
+                    </div>
+                </div>
+            </div>
+
+        </div>
 	</div>
 </section>
 
+<!-- SLIDE -->
 <section class="section-slide">
-	<div class="container">
-	Partie slide
-	</div>
-</section>
 
+    <div class="slider">
+  <!-- slides -->
+  <div class="slider__slides">
+    <div class="slide s--active">
+      <div class="slide__inner">
+        <div class="slide__content">
+          <h5 class="slide__heading">Nouveau Site !</h5>
+            <ul class="slide__text" >
+                <li>Utiliser les compétences acquises</li>
+                <li>Nouvelle apparence du site</li>
+                <li>Symphony 5</li>
+                <li>De nouvelles fonctionnalités en cours tel qu'une version responsive</li>
+              </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide__inner">
+        <div class="slide__content">
+          <h5 class="slide__heading">Une nouvelle expérience</h5>
+          <ul class="slide__text">
+              <li>Premier pas avec Vue.js</li>
+              <li>Travaille en équipe sur Github</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide s--prev">
+      <div class="slide__inner">
+        <div class="slide__content">
+          <h5 class="slide__heading">A venir</h5>
+          <ul class="slide__text">
+              <li>Une version responsive</li>
+              <li>Des animations css</li>
+              <li>Un formulaire de contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slides end -->
+  <div class="slider__control">
+    <div class="slider__control-line"></div>
+    <div class="slider__control-line"></div>
+  </div>
+  <div class="slider__control slider__control--right m--right">
+    <div class="slider__control-line"></div>
+    <div class="slider__control-line"></div>
+  </div>
+</div>
+
+
+
+</section>
 
 {% endblock %}

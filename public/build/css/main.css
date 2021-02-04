@@ -29,6 +29,7 @@ footer{
 .container {
     padding: 0 15px;
     margin: 0 auto;
+    max-width: 75%;
 }
 .container-fluid>p{ /*verif*/
 	font-size: 2rem;
@@ -48,10 +49,12 @@ h1{
     color: #515769;
 }
 h2{
+	margin: 4% 0;
 	font-size: 3em;
     color: #515769;
 }
 h3{
+	margin: 3% 0;
 	text-decoration: underline;
 	font-size: 2em;
     color: #515769;
@@ -79,34 +82,20 @@ header{
 	background-color: white;
 	font-size: 1.2em;
 	box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-	padding: 20px 0;
+	padding: 20px 50px;
 }
 .nav-item{
 	margin: 5px;
 	padding: 0 10px;
 }
 .navbar-nav{
-	list-style: none;	
-	float: right;
+	list-style: none;
 }
-.header .nav-item:hover {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    width: 9px;
-    height: 2px;
-    background: #17bed2;
-    opacity: 0;
-    content: " ";
-    transition-duration: .4s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1);
+.navbar-nav li a{
+	color: grey;
 }
-.header .nav-item:hover .nav-item-hover:after {
-    opacity: 1;
-    transition-duration: .4s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.7,1,.7,1);
+.navbar-nav li a:hover{
+	color: black;
 }
 .margin-page{
 	margin-top: 7%;
@@ -133,14 +122,37 @@ header{
 	padding: 5% 8% 0 8%;
 	font-size: 5em;
 }
+/*home presentation*/
 .section-presentation{
 	padding: 80px 0;
 }
-
+.photo_identite{
+	width: 50%;
+	box-shadow: 10px 5px 15px lightgrey;
+}
+.btn_{
+	display: flex;
+    justify-content: center;
+    z-index: 100;
+    width: 25%;
+    margin: 5% 13% 0 13%;
+    padding: 5px 25px;
+    background-color: white;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #cccccc;
+}
+.btn_ > i{
+	margin-right: 15px;
+    margin-top: 4px;
+}
 /*PRESENTATION*/
 .cv_image{
-    margin: 5% 5%;
-	width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.cv_image>img{
+    width: 60%;
 }
 .cv_download{
 	display: flex;
@@ -151,6 +163,10 @@ header{
     border: solid 1px;
     border-radius: 5px;
     border-color: #cccccc;
+}
+.cv_download > i{
+	margin-right: 15px;
+    margin-top: 4px;
 }
 /*REALISATION*/
 .realisations_img{
@@ -168,7 +184,10 @@ header{
 /*CONTACT*/
 /*Formulaire*/
 #contact{
-	margin: 10% 0;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	margin: 5% 0;
 }
 .form-contact{
     display: flex;
@@ -209,10 +228,8 @@ header{
 
 /*PHOTO*/
 .photo_build{
-	display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 20%;
+	display: block;
+    margin: 10% auto;
 }
 .build{
 	width: 100%;
